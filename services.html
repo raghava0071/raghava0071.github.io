@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services – Karanam Sites</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav-bar">
+                <a href="index.html" class="logo">Karanam&nbsp;Sites</a>
+                <ul class="nav-links">
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Services</h1>
+                <p>I offer productized services that deliver clear outcomes, fast.</p>
+            </div>
+        </section>
+        <section class="services-list">
+            <div class="container">
+                <article id="launch" class="service-item">
+                    <h2>Website Launch</h2>
+                    <p>Launch a polished, responsive website with up to five pages. Includes custom design, basic SEO, GA4 setup and hosting setup on your domain.</p>
+                    <ul>
+                        <li>Responsive design – optimised for mobile &amp; desktop</li>
+                        <li>SEO fundamentals – titles, meta descriptions &amp; sitemap</li>
+                        <li>Google Analytics 4 integration</li>
+                        <li>Deployment on GitHub Pages (or your host)</li>
+                    </ul>
+                    <p class="service-cta"><a href="contact.html" class="btn small">Request a Quote</a></p>
+                </article>
+                <article id="optimize" class="service-item">
+                    <h2>Speed &amp; SEO Boost</h2>
+                    <p>Improve your existing site’s performance and search visibility. I focus on Core Web Vitals, asset optimization, technical SEO, and analytics insights.</p>
+                    <ul>
+                        <li>Performance audits &amp; optimisation (LCP, FID, CLS)</li>
+                        <li>Image &amp; asset compression, caching and minification</li>
+                        <li>Structured data &amp; metadata improvement</li>
+                        <li>GA4 custom events &amp; Looker Studio dashboard</li>
+                    </ul>
+                    <p class="service-cta"><a href="contact.html" class="btn small">Request a Quote</a></p>
+                </article>
+                <article id="analytics" class="service-item">
+                    <h2>Data &amp; Analytics</h2>
+                    <p>Build pipelines and dashboards to power your business decisions. From ETL/ELT architecture to machine learning prototypes and BI reporting.</p>
+                    <ul>
+                        <li>ETL/ELT on AWS, GCP or local stack</li>
+                        <li>Data modelling in PostgreSQL, Redshift &amp; BigQuery</li>
+                        <li>Interactive dashboards (Streamlit, Looker Studio)</li>
+                        <li>Machine learning prototypes and A/B testing</li>
+                    </ul>
+                    <p class="service-cta"><a href="contact.html" class="btn small">Request a Quote</a></p>
+                </article>
+            </div>
+        </section>
+        <section class="back-link">
+            <div class="container">
+                <a href="index.html" class="btn small">Back to Home</a>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Karanam&nbsp;Sites. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="https://github.com/raghava0071" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/raghavendra-k-460127209/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

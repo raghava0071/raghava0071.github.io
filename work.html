@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work – Karanam Sites</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav-bar">
+                <a href="index.html" class="logo">Karanam&nbsp;Sites</a>
+                <ul class="nav-links">
+                    <li><a href="work.html" class="active">Work</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Case Studies &amp; Projects</h1>
+                <p>Explore how I combine engineering rigour and data analytics to deliver measurable results.</p>
+            </div>
+        </section>
+        <section class="case-studies">
+            <div class="container">
+                <!-- CCTV shoplifting prototype -->
+                <article id="cctv" class="case-study">
+                    <div class="text">
+                        <h2>CCTV Shoplifting Prototype</h2>
+                        <p><strong>Problem:</strong> Retailers lacked real‑time, automated detection of suspicious behaviour in stores.</p>
+                        <p><strong>Approach:</strong> Built a Python prototype using YOLOv8 &amp; DeepSORT for object detection and tracking. Implemented skeleton‑sequence LSTM to classify shoplifting risk and surface alerts through a Streamlit interface.</p>
+                        <p><strong>Results:</strong> Demonstrated accurate detection of suspicious actions in sample videos, providing a foundation for potential retail‑security product.</p>
+                        <p><strong>Stack:</strong> Python, PyTorch, YOLOv8, DeepSORT, LSTM, Streamlit.</p>
+                        <p><a href="https://github.com/raghava0071/cctv-shoplifting" target="_blank">View Code on GitHub</a></p>
+                    </div>
+                    <div class="image">
+                        <img src="https://via.placeholder.com/800x500" alt="CCTV shoplifting prototype">
+                    </div>
+                </article>
+                <!-- Job Market Intelligence Dashboard -->
+                <article id="jobmarket" class="case-study">
+                    <div class="text">
+                        <h2>Job Market Intelligence Dashboard</h2>
+                        <p><strong>Problem:</strong> Job seekers and employers needed insights into skill demand and salary trends across industries.</p>
+                        <p><strong>Approach:</strong> Developed ETL pipelines to extract, clean and store job postings. Utilised NLP for skills extraction, clustering for role classification and built interactive dashboards with Streamlit and Plotly.</p>
+                        <p><strong>Results:</strong> Delivered a real‑time dashboard to explore demand by region, role and skills, enabling informed decision‑making for job seekers and recruiters.</p>
+                        <p><strong>Stack:</strong> Python, Pandas, PostgreSQL, NLP, Streamlit, Docker.</p>
+                        <p><a href="https://github.com/raghava0071/job-market-intelligence-dashboard" target="_blank">View Code on GitHub</a></p>
+                    </div>
+                    <div class="image">
+                        <img src="https://via.placeholder.com/800x500" alt="Job market intelligence dashboard">
+                    </div>
+                </article>
+                <!-- GA4 & SEO case study -->
+                <article id="seo" class="case-study">
+                    <div class="text">
+                        <h2>GA4&nbsp;&amp;&nbsp;SEO for MSP/FYAR</h2>
+                        <p><strong>Problem:</strong> Non‑profit organisations lacked visibility into visitor behaviour and suffered from slow page performance and weak SEO.</p>
+                        <p><strong>Approach:</strong> Implemented GA4 with BigQuery exports and created Looker Studio dashboards. Improved Core Web Vitals by optimising assets and implementing caching. Conducted on‑page SEO overhaul with proper metadata and structured data.</p>
+                        <p><strong>Results:</strong> Achieved 38% increase in organic clicks, reduced LCP from 4.1s to 1.6s and improved SEO rankings for targeted keywords.</p>
+                        <p><strong>Stack:</strong> GA4, BigQuery, Looker Studio, HTML/CSS, JavaScript.</p>
+                        <p><a href="https://github.com/raghava0071" target="_blank">View Work on GitHub</a></p>
+                    </div>
+                    <div class="image">
+                        <img src="https://via.placeholder.com/800x500" alt="GA4 and SEO improvements">
+                    </div>
+                </article>
+                <!-- EMR job processing -->
+                <article id="emr" class="case-study">
+                    <div class="text">
+                        <h2>EMR‑Backed Job Processing</h2>
+                        <p><strong>Problem:</strong> Large datasets of job postings required scalable processing to extract features and export to downstream systems.</p>
+                        <p><strong>Approach:</strong> Leveraged AWS EMR clusters running Spark to process millions of records. Optimised partitioning and I/O strategies and stored results in S3 and Redshift for analytics.</p>
+                        <p><strong>Results:</strong> Improved throughput and reduced run time by 60%, enabling timely data ingestion for analytics.</p>
+                        <p><strong>Stack:</strong> AWS EMR, Spark, S3, Redshift.</p>
+                        <p><a href="https://github.com/raghava0071" target="_blank">View Code on GitHub</a></p>
+                    </div>
+                    <div class="image">
+                        <img src="https://via.placeholder.com/800x500" alt="EMR job processing">
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="back-link">
+            <div class="container">
+                <a href="index.html" class="btn small">Back to Home</a>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Karanam&nbsp;Sites. All rights reserved.</p>
+            <ul class="social-links">
+                <li><a href="https://github.com/raghava0071" target="_blank">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/raghavendra-k-460127209/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
