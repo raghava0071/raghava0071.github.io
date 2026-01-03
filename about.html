@@ -1,72 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About – Karanam Sites</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Karanam Sites</title>
+  <meta name="description" content="About Raghavendra Karanam: data-driven web, analytics, automation, and portfolio work." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <nav class="nav-bar">
-                <a href="index.html" class="logo">Karanam&nbsp;Sites</a>
-                <ul class="nav-links">
-                    <li><a href="work.html">Work</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html" class="active">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+  <header class="site-header">
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="index.html" aria-label="Karanam Sites Home">
+          <span class="brand-badge" aria-hidden="true"></span>
+          <span>Karanam Sites</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary">
+          <a href="work.html">Work</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a class="btn btn-secondary" href="work.html">See Work</a>
+          <a class="btn btn-primary" href="contact.html">Get a Quote</a>
         </div>
-    </header>
-    <main>
-        <section class="page-hero">
-            <div class="container">
-                <h1>About&nbsp;Me</h1>
-                <p>Get to know the person behind Karanam Sites.</p>
-            </div>
-        </section>
-        <section class="about-content">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-text">
-                        <p>Hello! I’m <strong>Raghavendra Karanam</strong>, a data‑driven engineer and problem solver based in Delray Beach, FL. I hold a Master’s degree in Data Science &amp; Analytics from Florida Atlantic University (GPA 3.87). My passion lies in blending web development with analytics to build solutions that are reliable, secure and measurable.</p>
-                        <p>With experience ranging from volunteer web projects for non‑profits to building ETL pipelines on AWS, I bring a unique perspective that bridges design, engineering and data. Whether it’s launching a fast site, optimising performance or developing dashboards, I treat every project as an opportunity to deliver lasting value.</p>
-                        <p>When I’m not coding, I enjoy exploring Florida’s coast, reading about machine learning advances and contributing to open‑source projects. I believe in continuous learning and sharing knowledge with the community.</p>
-                        <h2>Values</h2>
-                        <ul>
-                            <li><strong>Performance:</strong> Fast sites create happy users.</li>
-                            <li><strong>Reliability:</strong> Solid engineering &amp; secure practices come first.</li>
-                            <li><strong>Measurement:</strong> Decisions should be driven by data.</li>
-                            <li><strong>Clarity:</strong> Communication and documentation matter as much as code.</li>
-                        </ul>
-                        <p>Want to work together? Let’s connect and turn your idea into reality.</p>
-                        <p><a href="contact.html" class="btn primary">Get in Touch</a></p>
-                    </div>
-                    <div class="about-image">
-                        <img src="https://via.placeholder.com/400x400" alt="Raghavendra Karanam portrait">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="back-link">
-            <div class="container">
-                <a href="index.html" class="btn small">Back to Home</a>
-            </div>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; <span id="year"></span> Karanam&nbsp;Sites. All rights reserved.</p>
-            <ul class="social-links">
-                <li><a href="https://github.com/raghava0071" target="_blank">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/raghavendra-k-460127209/" target="_blank">LinkedIn</a></li>
-            </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">Home / About</div>
+      <div class="page-grid">
+        <div>
+          <h1>About</h1>
+          <p class="lead">
+            I’m Raghavendra Karanam. I build websites like an engineer—fast, secure, and measurable—then use analytics to improve outcomes.
+          </p>
         </div>
-    </footer>
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+        <aside class="card">
+          <h3>Core focus</h3>
+          <ul class="list">
+            <li>Web + performance engineering</li>
+            <li>GA4 tracking + dashboards</li>
+            <li>Automation and data workflows</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-3">
+        <div class="card">
+          <h3>Background</h3>
+          <p>
+            M.S. in Data Science & Analytics (FAU). Experience in web analytics, data pipelines, and building practical prototypes.
+          </p>
+        </div>
+        <div class="card">
+          <h3>How I work</h3>
+          <p>
+            Clear scope, clean execution, measurable outputs. I document decisions, use version control, and optimize for reliability.
+          </p>
+        </div>
+        <div class="card">
+          <h3>What I’m building</h3>
+          <p>
+            A portfolio-driven web and analytics practice—starting with high-quality sites that also track results properly.
+          </p>
+        </div>
+      </div>
+
+      <div class="cta-band" style="margin-top:18px;">
+        <div>
+          <h3 style="margin-bottom:6px;">Connect</h3>
+          <p style="margin:0; color:#475569;">If you want to collaborate, hire, or discuss a project—reach out.</p>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/raghavendra-k-460127209/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn-secondary" href="https://github.com/raghava0071" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn btn-primary" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+      <div>© <span id="y"></span> Karanam Sites</div>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="work.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  </footer>
 </body>
 </html>
