@@ -1,86 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services – Karanam Sites</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Karanam Sites</title>
+  <meta name="description" content="Website launch, performance & SEO, and analytics services by Karanam Sites." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header class="site-header">
-        <div class="container">
-            <nav class="nav-bar">
-                <a href="index.html" class="logo">Karanam&nbsp;Sites</a>
-                <ul class="nav-links">
-                    <li><a href="work.html">Work</a></li>
-                    <li><a href="services.html" class="active">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
+  <header class="site-header">
+    <div class="container">
+      <div class="nav">
+        <a class="brand" href="index.html" aria-label="Karanam Sites Home">
+          <span class="brand-badge" aria-hidden="true"></span>
+          <span>Karanam Sites</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Primary">
+          <a href="work.html">Work</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a class="btn btn-secondary" href="work.html">See Work</a>
+          <a class="btn btn-primary" href="contact.html">Get a Quote</a>
         </div>
-    </header>
-    <main>
-        <section class="page-hero">
-            <div class="container">
-                <h1>Services</h1>
-                <p>I offer productized services that deliver clear outcomes, fast.</p>
-            </div>
-        </section>
-        <section class="services-list">
-            <div class="container">
-                <article id="launch" class="service-item">
-                    <h2>Website Launch</h2>
-                    <p>Launch a polished, responsive website with up to five pages. Includes custom design, basic SEO, GA4 setup and hosting setup on your domain.</p>
-                    <ul>
-                        <li>Responsive design – optimised for mobile &amp; desktop</li>
-                        <li>SEO fundamentals – titles, meta descriptions &amp; sitemap</li>
-                        <li>Google Analytics 4 integration</li>
-                        <li>Deployment on GitHub Pages (or your host)</li>
-                    </ul>
-                    <p class="service-cta"><a href="contact.html" class="btn small">Request a Quote</a></p>
-                </article>
-                <article id="optimize" class="service-item">
-                    <h2>Speed &amp; SEO Boost</h2>
-                    <p>Improve your existing site’s performance and search visibility. I focus on Core Web Vitals, asset optimization, technical SEO, and analytics insights.</p>
-                    <ul>
-                        <li>Performance audits &amp; optimisation (LCP, FID, CLS)</li>
-                        <li>Image &amp; asset compression, caching and minification</li>
-                        <li>Structured data &amp; metadata improvement</li>
-                        <li>GA4 custom events &amp; Looker Studio dashboard</li>
-                    </ul>
-                    <p class="service-cta"><a href="contact.html" class="btn small">Request a Quote</a></p>
-                </article>
-                <article id="analytics" class="service-item">
-                    <h2>Data &amp; Analytics</h2>
-                    <p>Build pipelines and dashboards to power your business decisions. From ETL/ELT architecture to machine learning prototypes and BI reporting.</p>
-                    <ul>
-                        <li>ETL/ELT on AWS, GCP or local stack</li>
-                        <li>Data modelling in PostgreSQL, Redshift &amp; BigQuery</li>
-                        <li>Interactive dashboards (Streamlit, Looker Studio)</li>
-                        <li>Machine learning prototypes and A/B testing</li>
-                    </ul>
-                    <p class="service-cta"><a href="contact.html" class="btn small">Request a Quote</a></p>
-                </article>
-            </div>
-        </section>
-        <section class="back-link">
-            <div class="container">
-                <a href="index.html" class="btn small">Back to Home</a>
-            </div>
-        </section>
-    </main>
-    <footer class="site-footer">
-        <div class="container">
-            <p>&copy; <span id="year"></span> Karanam&nbsp;Sites. All rights reserved.</p>
-            <ul class="social-links">
-                <li><a href="https://github.com/raghava0071" target="_blank">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/raghavendra-k-460127209/" target="_blank">LinkedIn</a></li>
-            </ul>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-hero">
+    <div class="container">
+      <div class="breadcrumb">Home / Services</div>
+      <div class="page-grid">
+        <div>
+          <h1>Services</h1>
+          <p class="lead">
+            Practical website + analytics services with clear delivery. I build fast sites and make sure tracking is correct from day one.
+          </p>
         </div>
-    </footer>
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+        <aside class="card">
+          <h3>Typical outcomes</h3>
+          <ul class="list">
+            <li>Modern, responsive pages</li>
+            <li>SEO foundation (titles, structure, sitemap)</li>
+            <li>GA4 events and conversions</li>
+            <li>Performance improvements</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-title">
+            <h3>Website Launch</h3>
+            <span class="pill">Build</span>
+          </div>
+          <p>Multi-page site with a clean design system, strong messaging, and measurement-ready setup.</p>
+          <ul class="list">
+            <li>Home + Work + Services + About + Contact</li>
+            <li>Basic SEO setup</li>
+            <li>GA4 tracking plan + events</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <h3>Speed & SEO Boost</h3>
+            <span class="pill">Optimize</span>
+          </div>
+          <p>Fix what slows the site down and blocks SEO growth—Core Web Vitals and technical cleanup.</p>
+          <ul class="list">
+            <li>Performance audit</li>
+            <li>Image optimization + caching strategy</li>
+            <li>Technical SEO fixes</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card-title">
+            <h3>Analytics & Reporting</h3>
+            <span class="pill">Measure</span>
+          </div>
+          <p>Dashboards and event instrumentation so you can actually track growth and conversions.</p>
+          <ul class="list">
+            <li>GA4 events + conversions</li>
+            <li>UTM standards</li>
+            <li>Looker Studio dashboards</li>
+          </ul>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;">
+        <div class="cta-band">
+          <div>
+            <h3 style="margin-bottom:6px;">Need a quote?</h3>
+            <p style="margin:0; color:#475569;">Send your goal + deadline. I’ll reply with a clear plan.</p>
+          </div>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn btn-primary" href="contact.html">Contact</a>
+            <a class="btn btn-secondary" href="work.html">View work</a>
+          </div>
+        </div>
+      </div>
+
+      <p class="note">
+        Note: GitHub Pages is ideal for fast, secure portfolio and business sites. If you need backend features (logins, databases, payments),
+        we’ll integrate third-party services or move to a server host later.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
+      <div>© <span id="y"></span> Karanam Sites</div>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <a href="work.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+    <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  </footer>
 </body>
 </html>
