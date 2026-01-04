@@ -1,40 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
- <title>Work — Karanam Sites</title>
-<meta name="description" content="Selected case studies: web development, SEO, analytics, and data products with measurable outcomes." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<link rel="canonical" href="https://karanamsites.com/work.html" />
+  <title>Work and Case Studies | Karanam Sites</title>
+  <meta name="description" content="Case studies and featured projects by Karanam Sites. Websites, SEO, analytics, and data driven prototypes with clear outcomes and technical clarity." />
 
-<link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
-<meta name="theme-color" content="#0F172A" />
+  <link rel="canonical" href="https://karanamsites.com/work.html" />
+  <link rel="stylesheet" href="/style.css" />
 
-<meta property="og:site_name" content="Karanam Sites" />
-<meta property="og:title" content="Work — Karanam Sites" />
-<meta property="og:description" content="Selected case studies: web development, SEO, analytics, and data products with measurable outcomes." />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://karanamsites.com/work.html" />
-<meta property="og:image" content="https://karanamsites.com/assets/og-image.svg" />
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#0b1220" />
+
+  <meta property="og:site_name" content="Karanam Sites" />
+  <meta property="og:title" content="Work and Case Studies | Karanam Sites" />
+  <meta property="og:description" content="Featured work and case studies across websites, SEO, GA4, and data projects with clear outcomes." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://karanamsites.com/work.html" />
+  <meta property="og:image" content="https://karanamsites.com/assets/og-image.svg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"Work and Case Studies",
+    "url":"https://karanamsites.com/work.html",
+    "isPartOf":{
+      "@type":"WebSite",
+      "name":"Karanam Sites",
+      "url":"https://karanamsites.com/"
+    }
+  }
+  </script>
 </head>
+
 <body>
   <header class="site-header">
     <div class="container">
       <div class="nav">
-        <a class="brand" href="index.html" aria-label="Karanam Sites Home">
+        <a class="brand" href="/index.html" aria-label="Karanam Sites Home">
           <span class="brand-badge" aria-hidden="true"></span>
           <span>Karanam Sites</span>
         </a>
 
         <nav class="nav-links" aria-label="Primary">
-          <a href="work.html">Work</a>
-          <a href="services.html">Services</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
+          <a href="/work.html" aria-current="page">Work</a>
+          <a href="/services.html">Services</a>
+          <a href="/about.html">About</a>
+          <a href="/contact.html">Contact</a>
         </nav>
 
         <div class="nav-cta">
-          <a class="btn btn-secondary" href="services.html">Services</a>
-          <a class="btn btn-primary" href="contact.html">Get a Quote</a>
+          <a class="btn btn-secondary" href="/services.html">Services</a>
+          <a class="btn btn-primary" href="/contact.html">Get a Quote</a>
         </div>
       </div>
     </div>
@@ -43,23 +64,32 @@
   <main class="page-hero">
     <div class="container">
       <div class="breadcrumb">Home / Work</div>
+
       <div class="page-grid">
-        <div>
-          <h1>Work & Case Studies</h1>
+        <section>
+          <div class="kicker">Case studies and projects</div>
+          <h1>Work that proves outcomes, not claims.</h1>
           <p class="lead">
-            Selected projects that demonstrate how I build: clear problem framing, pragmatic implementation, measurable outcomes.
+            I showcase projects with clear problem statements, approach, and results.
+            This helps clients and recruiters evaluate quality fast.
           </p>
-        </div>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="/contact.html">Start a Project</a>
+            <a class="btn btn-secondary" href="https://github.com/raghava0071" target="_blank" rel="noreferrer">View GitHub</a>
+          </div>
+        </section>
 
         <aside class="card">
-          <h3>What you’ll see</h3>
+          <h3>How I present work</h3>
+          <p>Each case study includes:</p>
           <ul class="list">
-            <li>Problem → approach → results</li>
-            <li>Tools & architecture used</li>
-            <li>Links to GitHub / demo</li>
+            <li>Context and goal</li>
+            <li>What was built and why</li>
+            <li>Measurement and tracking plan</li>
+            <li>Results and next steps</li>
           </ul>
-          <div class="hr"></div>
-          <a class="btn btn-secondary" style="width:100%;" href="https://github.com/raghava0071" target="_blank" rel="noopener">Open GitHub</a>
+          <p class="note">Tip: If you have a website, I can review performance and SEO and propose fixes with priorities.</p>
         </aside>
       </div>
     </div>
@@ -67,76 +97,92 @@
 
   <section class="section">
     <div class="container">
-      <h2>Featured</h2>
-      <p class="lead">Start here. These are the strongest portfolio items for clients and recruiters.</p>
+      <h2 class="section-title">Featured Case Studies</h2>
+      <p class="section-sub">A selection of work across websites, analytics, and data projects. Links can point to GitHub or live demos.</p>
 
-      <div class="grid-3" style="margin-top:18px;">
-        <article class="card work-item">
-          <div class="card-title">
-            <h3>CCTV Shoplifting Prototype</h3>
-            <span class="pill">Computer Vision</span>
+      <div class="grid-3">
+        <article class="card case">
+          <div class="meta">
+            <span class="pill">Computer vision</span>
+            <span class="pill">Prototype</span>
           </div>
-          <p>Real-time detection + tracking proof-of-concept using modern CV pipeline concepts.</p>
-          <a class="inline" href="https://github.com/raghava0071/cctv-shoplifting" target="_blank" rel="noopener">GitHub →</a>
+          <h3 class="title">CCTV Shoplifting Prototype</h3>
+          <p class="desc">
+            A proof of concept that detects and tracks suspicious activity in real time, designed for retail settings.
+          </p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn btn-secondary" href="https://github.com/raghava0071/cctv-shoplifting" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn btn-primary" href="/contact.html">Build something similar</a>
+          </div>
         </article>
 
-        <article class="card work-item">
-          <div class="card-title">
-            <h3>Job Market Intelligence Dashboard</h3>
-            <span class="pill">NLP + Analytics</span>
+        <article class="card case">
+          <div class="meta">
+            <span class="pill">NLP</span>
+            <span class="pill">Dashboard</span>
           </div>
-          <p>ETL + clustering + Streamlit dashboard to surface skills trends and role clusters.</p>
-          <a class="inline" href="https://github.com/raghava0071/job-market-intelligence-dashboard" target="_blank" rel="noopener">GitHub →</a>
+          <h3 class="title">Job Market Intelligence Dashboard</h3>
+          <p class="desc">
+            A Streamlit dashboard that extracts trending skills, clusters roles, and updates insights from real job data.
+          </p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn btn-secondary" href="https://github.com/raghava0071/job-market-intelligence-dashboard" target="_blank" rel="noreferrer">GitHub</a>
+            <a class="btn btn-secondary" href="https://shopegenie-e-hcb4nhbpnksupymartxwqd.streamlit.app/" target="_blank" rel="noreferrer">Sample demo link</a>
+          </div>
         </article>
 
-        <article class="card work-item">
-          <div class="card-title">
-            <h3>GA4 & SEO for MSP/FYAR</h3>
-            <span class="pill">Web Analytics</span>
+        <article class="card case">
+          <div class="meta">
+            <span class="pill">Analytics</span>
+            <span class="pill">GA4</span>
           </div>
-          <p>Tracking plan, events, dashboards, and SEO hygiene to improve measurement and visibility.</p>
-          <a class="inline" href="contact.html">Request details →</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--tight" style="background: var(--bg-soft); border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
-    <div class="container">
-      <h2>More Projects</h2>
-      <p class="lead">Additional repos that show depth across data engineering, automation, and analysis.</p>
-
-      <div class="grid-3" style="margin-top:18px;">
-        <article class="card work-item">
-          <div class="card-title">
-            <h3>Florida Picks Project</h3>
-            <span class="pill">R + Analytics</span>
+          <h3 class="title">GA4 and SEO Improvements for Nonprofits</h3>
+          <p class="desc">
+            Implemented tracking and reporting, improved content structure, and focused on measurable engagement outcomes.
+          </p>
+          <div style="display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn btn-secondary" href="/services.html">What I deliver</a>
+            <a class="btn btn-primary" href="/contact.html">Request a plan</a>
           </div>
-          <p>Statistical exploration and visual reporting pipeline.</p>
-          <a class="inline" href="https://github.com/raghava0071/florida-picks-project" target="_blank" rel="noopener">GitHub →</a>
-        </article>
-
-        <article class="card work-item">
-          <div class="card-title">
-            <h3>Flight Price Tracking</h3>
-            <span class="pill">ETL</span>
-          </div>
-          <p>Data ingestion and tracking workflow focused on reliability and repeatability.</p>
-          <a class="inline" href="https://github.com/raghava0071/amadeus-flight-price-fluctuations" target="_blank" rel="noopener">GitHub →</a>
-        </article>
-
-        <article class="card work-item">
-          <div class="card-title">
-            <h3>Image Uploader</h3>
-            <span class="pill">Web Utility</span>
-          </div>
-          <p>Lightweight tool demonstrating practical web workflow.</p>
-          <a class="inline" href="https://github.com/raghava0071/image-uploader" target="_blank" rel="noopener">GitHub →</a>
         </article>
       </div>
 
-      <div style="margin-top:18px;">
-        <a class="btn btn-secondary" href="services.html">See how I can help</a>
+      <div class="section" style="padding-bottom:0;">
+        <h2 class="section-title">More Projects</h2>
+        <p class="section-sub">If you want, I can convert any GitHub repo into a clear client friendly case study page.</p>
+
+        <div class="grid-2">
+          <div class="card">
+            <h3 style="margin:0 0 8px;">Flight Price Tracking</h3>
+            <p style="margin:0; color:rgba(255,255,255,.70);">
+              Data collection and analysis for pricing trends with reproducible workflows.
+            </p>
+            <div style="margin-top:12px;">
+              <a class="btn btn-secondary" href="https://github.com/raghava0071/amadeus-flight-price-fluctuations" target="_blank" rel="noreferrer">Open repo</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 style="margin:0 0 8px;">Florida Picks Project</h3>
+            <p style="margin:0; color:rgba(255,255,255,.70);">
+              Statistical exploration and reporting workflows with clear documentation.
+            </p>
+            <div style="margin-top:12px;">
+              <a class="btn btn-secondary" href="https://github.com/raghava0071/florida-picks-project" target="_blank" rel="noreferrer">Open repo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:18px;" class="cta-band">
+        <div>
+          <h3 style="margin:0 0 6px;">Want your site reviewed like a pro?</h3>
+          <p style="margin:0; color:rgba(255,255,255,.70);">Send your site link and goal. I will reply with priorities and a simple action plan.</p>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="/contact.html">Contact</a>
+          <a class="btn btn-secondary" href="/services.html">See services</a>
+        </div>
       </div>
     </div>
   </section>
@@ -145,10 +191,10 @@
     <div class="container" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
       <div>© <span id="y"></span> Karanam Sites</div>
       <div style="display:flex; gap:14px; flex-wrap:wrap;">
-        <a href="work.html">Work</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+        <a href="/work.html">Work</a>
+        <a href="/services.html">Services</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
       </div>
     </div>
     <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
