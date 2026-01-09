@@ -3,132 +3,243 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — Karanam Sites</title>
-  <meta name="description" content="Contact Karanam Sites for website builds, analytics, and performance work." />
+
+  <title>Contact | Karanam Sites</title>
+  <meta name="description" content="Contact Karanam Sites for website builds, SEO foundations, GA4 analytics, and performance improvements. Share your goal and timeline to get next steps." />
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://karanamsites.com/contact.html" />
+  <meta name="theme-color" content="#1f5eff" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Karanam Sites" />
+  <meta property="og:title" content="Contact | Karanam Sites" />
+  <meta property="og:description" content="Share your project goal and timeline. Website builds, SEO foundations, GA4 analytics, and performance improvements." />
+  <meta property="og:url" content="https://karanamsites.com/contact.html" />
+  <meta property="og:image" content="https://karanamsites.com/assets/og-image.svg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact | Karanam Sites" />
+  <meta name="twitter:description" content="Share your project goal and timeline. Website builds, SEO foundations, GA4 analytics, and performance improvements." />
+  <meta name="twitter:image" content="https://karanamsites.com/assets/og-image.svg" />
+
   <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"ContactPage",
+    "name":"Contact | Karanam Sites",
+    "url":"https://karanamsites.com/contact.html",
+    "isPartOf":{
+      "@type":"WebSite",
+      "name":"Karanam Sites",
+      "url":"https://karanamsites.com/"
+    }
+  }
+  </script>
 </head>
+
 <body>
-  <header class="site-header">
-    <div class="container">
-      <div class="nav">
-        <a class="brand" href="index.html" aria-label="Karanam Sites Home">
-          <span class="brand-badge" aria-hidden="true"></span>
-          <span>Karanam Sites</span>
-        </a>
+  <header class="siteHeader">
+    <div class="container headerInner">
+      <a class="brand" href="index.html" aria-label="Karanam Sites Home">
+        <span class="brandMark" aria-hidden="true"></span>
+        <span>Karanam Sites</span>
+      </a>
 
-        <nav class="nav-links" aria-label="Primary">
-          <a href="work.html">Work</a>
-          <a href="services.html">Services</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-        </nav>
+      <nav class="nav" aria-label="Primary">
+        <a href="work.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
 
-        <div class="nav-cta">
-          <a class="btn btn-secondary" href="work.html">See Work</a>
-          <a class="btn btn-primary" href="services.html">Services</a>
-        </div>
+      <div class="actions">
+        <a class="btn secondary" href="work.html">See Work</a>
+        <a class="btn primary" href="contact.html">Get a Quote</a>
       </div>
     </div>
   </header>
 
-  <main class="page-hero">
-    <div class="container">
-      <div class="breadcrumb">Home / Contact</div>
-      <div class="page-grid">
-        <div>
-          <h1>Contact</h1>
-          <p class="lead">Share what you need and your deadline. I’ll respond with next steps.</p>
+  <section class="hero">
+    <div class="container heroInner">
+      <div>
+        <span class="badge">Contact</span>
+        <h1 class="h1">Tell me what you need and your timeline.</h1>
+        <p class="lead">
+          Share your goal, what pages you need, and any deadline. I will respond with clear next steps and a recommended approach.
+        </p>
+
+        <div class="actions">
+          <a class="btn primary" href="#project-form">Send Details</a>
+          <a class="btn secondary" href="work.html">View Work</a>
         </div>
-        <aside class="card">
-          <h3>Direct contact</h3>
-          <p class="mini" style="margin-bottom:10px;">Fastest response:</p>
-          <a class="btn btn-primary" style="width:100%;" href="mailto:raghavendrakaranam30@gmail.com?subject=Project%20Inquiry%20-%20Karanam%20Sites">Email me</a>
-          <p class="note">Email: raghavendrakaranam30@gmail.com</p>
-        </aside>
       </div>
+
+      <aside class="card">
+        <h2 class="h2" style="margin-bottom:10px;">Direct contact</h2>
+        <p class="lead" style="margin-bottom:12px; font-size:15px;">
+          Fastest response is email.
+        </p>
+
+        <a
+          class="btn primary"
+          style="width:100%; justify-content:center;"
+          href="mailto:raghavendrakaranam30@gmail.com?subject=Project%20Inquiry%20Karanam%20Sites"
+        >
+          Email me
+        </a>
+
+        <p style="margin-top:10px; color:var(--muted); font-size:14px;">
+          raghavendrakaranam30@gmail.com
+        </p>
+      </aside>
     </div>
-  </main>
+  </section>
 
-  <section class="section">
+  <section class="section" id="project-form">
     <div class="container">
-      <div class="grid-3">
-        <div class="card" style="grid-column: span 2;">
-          <h2>Project details</h2>
-          <p class="mini">This form opens your email client and pre-fills the message.</p>
+      <div class="grid two" style="align-items:start;">
+        <div class="card">
+          <h2 class="h2">Project details</h2>
+          <p class="lead" style="font-size:15px;">
+            This form opens your email app and pre fills a structured message so nothing important is missed.
+          </p>
 
-          <form class="form" id="contactForm">
+          <form id="contactForm" class="form" style="margin-top:14px;">
             <div class="field">
               <label for="name">Your name</label>
-              <input id="name" name="name" type="text" placeholder="Full name" required />
+              <input id="name" name="name" type="text" placeholder="Full name" autocomplete="name" required />
             </div>
 
             <div class="field">
               <label for="email">Your email</label>
-              <input id="email" name="email" type="email" placeholder="name@email.com" required />
+              <input id="email" name="email" type="email" placeholder="name@email.com" autocomplete="email" required />
             </div>
 
             <div class="field">
-              <label for="need">What do you need?</label>
+              <label for="need">What do you need</label>
               <select id="need" name="need" required>
-                <option value="">Select one</option>
-                <option>Website Launch</option>
-                <option>Speed & SEO Boost</option>
-                <option>Analytics Setup (GA4 / Dashboard)</option>
-                <option>Other</option>
+                <option value="" selected>Select one</option>
+                <option value="Website Launch">Website Launch</option>
+                <option value="Speed and SEO Boost">Speed and SEO Boost</option>
+                <option value="Analytics Setup GA4 Dashboard">Analytics Setup GA4 Dashboard</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="timeline">Timeline</label>
+              <select id="timeline" name="timeline" required>
+                <option value="" selected>Select one</option>
+                <option value="This week">This week</option>
+                <option value="Two weeks">Two weeks</option>
+                <option value="This month">This month</option>
+                <option value="Not sure yet">Not sure yet</option>
               </select>
             </div>
 
             <div class="field">
               <label for="message">Details</label>
-              <textarea id="message" name="message" placeholder="Describe your goal, pages needed, and deadline." required></textarea>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Describe your goal, pages needed, target location if relevant, and any reference sites you like."
+                required
+              ></textarea>
             </div>
 
-            <button class="btn btn-primary" type="submit">Send Email</button>
-            <p class="note">If nothing opens, use the “Email me” button above.</p>
+            <button class="btn primary" type="submit">Send Email</button>
+
+            <p style="margin-top:10px; color:var(--muted); font-size:14px;">
+              If your email app does not open, use the Email me button above.
+            </p>
           </form>
         </div>
 
-        <aside class="card">
-          <h3>What to include</h3>
-          <ul class="list">
-            <li>Business name + industry</li>
-            <li>Target location (if local)</li>
-            <li>Pages you want</li>
-            <li>Deadline</li>
-            <li>Any reference sites you like</li>
-          </ul>
+        <aside class="card muted">
+          <h2 class="h2" style="margin-bottom:10px;">What to include</h2>
+          <div class="grid" style="gap:12px;">
+            <div class="kpi">
+              <div class="title">Business and industry</div>
+              <div class="desc">Who you serve and what you offer</div>
+            </div>
+            <div class="kpi">
+              <div class="title">Target area</div>
+              <div class="desc">City, county, or service region</div>
+            </div>
+            <div class="kpi">
+              <div class="title">Pages you want</div>
+              <div class="desc">Home, services, booking, contact, and so on</div>
+            </div>
+            <div class="kpi">
+              <div class="title">Deadline and priorities</div>
+              <div class="desc">What needs to ship first</div>
+            </div>
+            <div class="kpi">
+              <div class="title">Reference examples</div>
+              <div class="desc">Sites you like and why</div>
+            </div>
+          </div>
         </aside>
       </div>
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="container" style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;">
-      <div>© <span id="y"></span> Karanam Sites</div>
-      <div style="display:flex; gap:14px; flex-wrap:wrap;">
-        <a href="work.html">Work</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+  <footer class="siteFooter">
+    <div class="container footerInner">
+      <div>
+        <p><strong>Karanam Sites</strong></p>
+        <p class="lead" style="margin:0; font-size:15px;">
+          Data driven websites, SEO foundations, and analytics setups built for speed and measurable outcomes.
+        </p>
+        <p style="margin-top:12px;">
+          <small>© <span id="y"></span> Karanam Sites. All rights reserved.</small>
+        </p>
+      </div>
+
+      <div>
+        <p><strong>Quick links</strong></p>
+        <div class="footerLinks">
+          <a href="work.html">Work</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="robots.txt">Robots</a>
+          <a href="sitemap.xml">Sitemap</a>
+        </div>
       </div>
     </div>
+
     <script>
       document.getElementById("y").textContent = new Date().getFullYear();
 
-      // Mailto submit (works on static hosting)
+      const path = location.pathname.split("/").pop() || "index.html";
+      document.querySelectorAll(".nav a").forEach(a => {
+        if (a.getAttribute("href") === path) a.classList.add("active");
+      });
+
       document.getElementById("contactForm").addEventListener("submit", function (e) {
         e.preventDefault();
+
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
         const need = document.getElementById("need").value.trim();
+        const timeline = document.getElementById("timeline").value.trim();
         const msg = document.getElementById("message").value.trim();
 
-        const subject = encodeURIComponent(`Project Inquiry - ${need || "Karanam Sites"}`);
+        const subject = encodeURIComponent("Project inquiry Karanam Sites");
         const body = encodeURIComponent(
-          `Name: ${name}\nEmail: ${email}\nNeed: ${need}\n\nDetails:\n${msg}\n`
+          "Name: " + name + "\n" +
+          "Email: " + email + "\n" +
+          "Need: " + need + "\n" +
+          "Timeline: " + timeline + "\n\n" +
+          "Details:\n" + msg + "\n"
         );
 
-        window.location.href = `mailto:raghavendrakaranam30@gmail.com?subject=${subject}&body=${body}`;
+        window.location.href =
+          "mailto:raghavendrakaranam30@gmail.com?subject=" + subject + "&body=" + body;
       });
     </script>
   </footer>
