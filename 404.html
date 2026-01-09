@@ -2,22 +2,148 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Page not found — Karanam Sites</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>404 | Page Not Found | Karanam Sites</title>
+  <meta name="description" content="The page you requested could not be found. Use the navigation below to return to Karanam Sites." />
+  <meta name="robots" content="noindex, follow" />
+
+  <link rel="canonical" href="https://karanamsites.com/404.html" />
+  <meta name="theme-color" content="#1f5eff" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Karanam Sites" />
+  <meta property="og:title" content="404 | Page Not Found | Karanam Sites" />
+  <meta property="og:description" content="The page you requested could not be found. Use the links to return to the site." />
+  <meta property="og:url" content="https://karanamsites.com/404.html" />
+  <meta property="og:image" content="https://karanamsites.com/assets/og-image.svg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="404 | Page Not Found | Karanam Sites" />
+  <meta name="twitter:description" content="The page you requested could not be found. Use the links to return to the site." />
+  <meta name="twitter:image" content="https://karanamsites.com/assets/og-image.svg" />
+
+  <link rel="icon" href="/assets/icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/style.css" />
 </head>
+
 <body>
-  <main class="section">
-    <div class="container">
-      <div class="card">
-        <h1>404 — Page not found</h1>
-        <p class="lead">The page you’re looking for doesn’t exist.</p>
-        <div style="display:flex; gap:10px; flex-wrap:wrap;">
-          <a class="btn btn-primary" href="index.html">Go Home</a>
-          <a class="btn btn-secondary" href="work.html">View Work</a>
+  <header class="siteHeader">
+    <div class="container headerInner">
+      <a class="brand" href="index.html" aria-label="Karanam Sites Home">
+        <span class="brandMark" aria-hidden="true"></span>
+        <span>Karanam Sites</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="work.html">Work</a>
+        <a href="services.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="actions">
+        <a class="btn secondary" href="work.html">See Work</a>
+        <a class="btn primary" href="contact.html">Get a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container heroInner">
+      <div>
+        <span class="badge">404</span>
+        <h1 class="h1">Page not found.</h1>
+        <p class="lead">
+          The page you are trying to reach does not exist or may have moved.
+          Use the links below to get back on track.
+        </p>
+
+        <div class="actions">
+          <a class="btn primary" href="index.html">Go Home</a>
+          <a class="btn secondary" href="work.html">View Work</a>
+          <a class="btn secondary" href="contact.html">Contact</a>
+        </div>
+
+        <div class="card muted" style="margin-top:18px;">
+          <div class="grid two" style="align-items:center;">
+            <div>
+              <h2 class="h2" style="margin-bottom:8px;">Quick help</h2>
+              <p class="lead" style="margin:0; font-size:15px;">
+                If you typed the URL manually, check spelling. Otherwise, start from the homepage or review the case studies.
+              </p>
+            </div>
+            <div class="actions" style="justify-content:flex-end; margin-top:0;">
+              <a class="btn secondary" href="services.html">Services</a>
+              <a class="btn secondary" href="about.html">About</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h2 class="h2" style="margin-bottom:10px;">Popular destinations</h2>
+        <div class="grid" style="gap:12px;">
+          <div class="kpi">
+            <div class="title">Work</div>
+            <div class="desc">Case studies and featured projects</div>
+            <div class="actions" style="margin-top:10px;">
+              <a class="btn secondary" href="work.html">Open Work</a>
+            </div>
+          </div>
+          <div class="kpi">
+            <div class="title">Services</div>
+            <div class="desc">Website builds, SEO foundations, analytics</div>
+            <div class="actions" style="margin-top:10px;">
+              <a class="btn secondary" href="services.html">Open Services</a>
+            </div>
+          </div>
+          <div class="kpi">
+            <div class="title">Contact</div>
+            <div class="desc">Send your goal and timeline</div>
+            <div class="actions" style="margin-top:10px;">
+              <a class="btn primary" href="contact.html">Contact</a>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <footer class="siteFooter">
+    <div class="container footerInner">
+      <div>
+        <p><strong>Karanam Sites</strong></p>
+        <p class="lead" style="margin:0; font-size:15px;">
+          Data driven websites, SEO foundations, and analytics setups built for speed and measurable outcomes.
+        </p>
+        <p style="margin-top:12px;">
+          <small>© <span id="y"></span> Karanam Sites. All rights reserved.</small>
+        </p>
+      </div>
+
+      <div>
+        <p><strong>Quick links</strong></p>
+        <div class="footerLinks">
+          <a href="index.html">Home</a>
+          <a href="work.html">Work</a>
+          <a href="services.html">Services</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="robots.txt">Robots</a>
+          <a href="sitemap.xml">Sitemap</a>
         </div>
       </div>
     </div>
-  </main>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+
+      const path = location.pathname.split("/").pop() || "index.html";
+      document.querySelectorAll(".nav a").forEach(a => {
+        if (a.getAttribute("href") === path) a.classList.add("active");
+      });
+    </script>
+  </footer>
 </body>
 </html>
