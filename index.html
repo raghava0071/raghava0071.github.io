@@ -53,6 +53,18 @@
     "jobTitle":"Web Analytics and Data Science"
   }
   </script>
+  <!-- Google Analytics (GA4) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-V6DBGESS1P', {
+    anonymize_ip: true,
+    page_title: document.title,
+    page_location: window.location.href
+  });
+</script>
 </head>
 
 <body>
