@@ -51,6 +51,19 @@
   });
 </script>
 </head>
+<script>
+  document.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (link.textContent.toLowerCase().includes('contact') ||
+          link.textContent.toLowerCase().includes('quote')) {
+        gtag('event', 'cta_click', {
+          link_text: link.textContent,
+          page_path: location.pathname
+        });
+      }
+    });
+  });
+</script>
 
 <body>
   <header class="siteHeader">
