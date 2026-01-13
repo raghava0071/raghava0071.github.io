@@ -38,32 +38,16 @@
     }
   }
   </script>
+
   <!-- Google Analytics (GA4) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-V6DBGESS1P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-V6DBGESS1P', {
-    anonymize_ip: true,
-    page_title: document.title,
-    page_location: window.location.href
-  });
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6DBGESS1P"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-V6DBGESS1P');
+  </script>
 </head>
-<script>
-  document.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (link.textContent.toLowerCase().includes('contact') ||
-          link.textContent.toLowerCase().includes('quote')) {
-        gtag('event', 'cta_click', {
-          link_text: link.textContent,
-          page_path: location.pathname
-        });
-      }
-    });
-  });
-</script>
 
 <body>
   <header class="siteHeader">
@@ -97,8 +81,8 @@
         </p>
 
         <div class="actions">
-          <a class="btn primary" href="#project-form">Send Details</a>
-          <a class="btn secondary" href="work.html">View Work</a>
+          <a class="btn primary" href="#project-form" data-track="cta" data-cta="send_details">Send Details</a>
+          <a class="btn secondary" href="work.html" data-track="cta" data-cta="view_work">View Work</a>
         </div>
       </div>
 
@@ -109,14 +93,11 @@
         </p>
 
         <a
+          id="emailMeBtn"
           class="btn primary"
           style="width:100%; justify-content:center;"
-          gtag('event', 'contact_submit', {
-  event_category: 'engagement',
-  event_label: 'Contact Form'
-});
-
           href="mailto:raghavendrakaranamusa@gmail.com?subject=Project%20Inquiry%20Karanam%20Sites"
+          data-track="email"
         >
           Email me
         </a>
@@ -134,7 +115,7 @@
         <div class="card">
           <h2 class="h2">Project details</h2>
           <p class="lead" style="font-size:15px;">
-            This form opens your email app and pre fills a structured message so nothing important is missed.
+            This form opens your email app and pre-fills a structured message so nothing important is missed.
           </p>
 
           <form id="contactForm" class="form" style="margin-top:14px;">
@@ -154,7 +135,7 @@
                 <option value="" selected>Select one</option>
                 <option value="Website Launch">Website Launch</option>
                 <option value="Speed and SEO Boost">Speed and SEO Boost</option>
-                <option value="Analytics Setup GA4 Dashboard">Analytics Setup GA4 Dashboard</option>
+                <option value="Analytics Setup (GA4 / Dashboard)">Analytics Setup (GA4 / Dashboard)</option>
                 <option value="Other">Other</option>
               </select>
             </div>
@@ -180,7 +161,7 @@
               ></textarea>
             </div>
 
-            <button class="btn primary" type="submit">Send Email</button>
+            <button class="btn primary" type="submit" data-track="form_submit">Send Email</button>
 
             <p style="margin-top:10px; color:var(--muted); font-size:14px;">
               If your email app does not open, use the Email me button above.
@@ -222,7 +203,7 @@
       <div>
         <p><strong>Karanam Sites</strong></p>
         <p class="lead" style="margin:0; font-size:15px;">
-          Data driven websites, SEO foundations, and analytics setups built for speed and measurable outcomes.
+          Data-driven websites, SEO foundations, and analytics setups built for speed and measurable outcomes.
         </p>
         <p style="margin-top:12px;">
           <small>© <span id="y"></span> Karanam Sites. All rights reserved.</small>
@@ -241,37 +222,79 @@
         </div>
       </div>
     </div>
+  </footer>
 
-    <script>
-      document.getElementById("y").textContent = new Date().getFullYear();
+  <!-- Page scripts (after HTML so DOM exists) -->
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
 
-      const path = location.pathname.split("/").pop() || "index.html";
-      document.querySelectorAll(".nav a").forEach(a => {
-        if (a.getAttribute("href") === path) a.classList.add("active");
+    // Highlight active nav link
+    const path = location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll(".nav a").forEach(a => {
+      if (a.getAttribute("href") === path) a.classList.add("active");
+    });
+
+    // Track CTA clicks (clean + controlled)
+    document.querySelectorAll('[data-track="cta"]').forEach(link => {
+      link.addEventListener('click', () => {
+        if (typeof gtag === "function") {
+          gtag('event', 'cta_click', {
+            cta: link.getAttribute('data-cta') || link.textContent.trim(),
+            page_path: location.pathname
+          });
+        }
       });
+    });
 
-      document.getElementById("contactForm").addEventListener("submit", function (e) {
-        e.preventDefault();
+    // Track direct email button click
+    const emailBtn = document.getElementById("emailMeBtn");
+    if (emailBtn) {
+      emailBtn.addEventListener("click", () => {
+        if (typeof gtag === "function") {
+          gtag('event', 'email_click', {
+            page_path: location.pathname,
+            link_text: 'Email me'
+          });
+        }
+      });
+    }
 
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const need = document.getElementById("need").value.trim();
-        const timeline = document.getElementById("timeline").value.trim();
-        const msg = document.getElementById("message").value.trim();
+    // Form submit -> track then open mailto
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
 
-        const subject = encodeURIComponent("Project inquiry Karanam Sites");
-        const body = encodeURIComponent(
-          "Name: " + name + "\n" +
-          "Email: " + email + "\n" +
-          "Need: " + need + "\n" +
-          "Timeline: " + timeline + "\n\n" +
-          "Details:\n" + msg + "\n"
-        );
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const need = document.getElementById("need").value.trim();
+      const timeline = document.getElementById("timeline").value.trim();
+      const msg = document.getElementById("message").value.trim();
 
+      // ✅ Correct place for contact_submit
+      if (typeof gtag === "function") {
+        gtag('event', 'contact_submit', {
+          event_category: 'engagement',
+          event_label: 'Contact Form',
+          page_path: location.pathname,
+          need: need || '(not set)',
+          timeline: timeline || '(not set)'
+        });
+      }
+
+      const subject = encodeURIComponent("Project inquiry - Karanam Sites");
+      const body = encodeURIComponent(
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Need: " + need + "\n" +
+        "Timeline: " + timeline + "\n\n" +
+        "Details:\n" + msg + "\n"
+      );
+
+      // Give the event a brief moment to queue before navigating (static-site safe)
+      setTimeout(() => {
         window.location.href =
           "mailto:raghavendrakaranamusa@gmail.com?subject=" + subject + "&body=" + body;
-      });
-    </script>
-  </footer>
+      }, 150);
+    });
+  </script>
 </body>
 </html>
