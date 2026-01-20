@@ -304,3 +304,70 @@ textarea{ min-height: 140px; resize: vertical; }
   .btn{ transition: none; }
   .btn:hover{ transform: none; }
 }
+
+/* ===== Premium background (Sanjeev-style) ===== */
+:root{
+  --bg0: #05070f;
+  --bg1: #070a16;
+  --glowA: rgba(0, 180, 255, 0.22);
+  --glowB: rgba(120, 70, 255, 0.18);
+  --glowC: rgba(0, 255, 190, 0.12);
+}
+
+/* Make sure the page canvas is dark */
+html, body{
+  background: radial-gradient(1200px 800px at 10% 10%, rgba(31,94,255,0.10), transparent 60%),
+              radial-gradient(1000px 700px at 90% 20%, rgba(140,90,255,0.10), transparent 55%),
+              linear-gradient(180deg, var(--bg0), var(--bg1));
+}
+
+/* Background wrapper sits behind everything */
+.bgFX{
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Soft glow blobs */
+.bgFX .blob{
+  position: absolute;
+  width: 620px;
+  height: 620px;
+  border-radius: 999px;
+  filter: blur(60px);
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+.bgFX .b1{ left: -140px; top: -160px; background: var(--glowA); }
+.bgFX .b2{ right: -180px; top: -120px; background: var(--glowB); }
+.bgFX .b3{ left: 22%; bottom: -260px; background: var(--glowC); }
+
+/* Subtle grain overlay */
+.bgFX::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='180' height='180' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+  opacity: .08;
+  mix-blend-mode: overlay;
+}
+
+/* Make cards look more premium on dark bg */
+.card{
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Improve hero spacing on dark bg (optional but recommended) */
+.hero{
+  position: relative;
+}
+
+/* Stronger H1 rhythm */
+.h1{
+  letter-spacing: -0.02em;
+}
